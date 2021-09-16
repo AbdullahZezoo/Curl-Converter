@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curl Command</title>
+    <style>
+        .center {
+              margin: auto;
+              width: 50%;
+              padding: 10px;
+         }
+         .button {
+              background-color: black; /* Green */
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              -webkit-transition-duration: 0.4s; /* Safari */
+              transition-duration: 0.4s;
+            }
+
+            .button1 {
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Welcome to Curl Converter</h1>
+        <form method="Post">
+            <label for="curl">Curl Command:</label>
+            <textarea id="curl" name="curl" rows="6" cols="80"></textarea>
+            <input class="button button1" type="submit" value="Convert" />
+        </form>
+
+        {% if method %}
+        <div>
+            <h1>**Response**:</h1>
+            <h2>Welcome to our demo API, here are the details of your request:</h2>
+            <h3>***Headers***:</h3>
+            <h4>{{ headers }}</h4>
+            <h3>***Method***:</h3>
+            <h4>{{ method }}</h4>
+            <h3>Body:</h3>
+            <h4>{{ body }}</h4>
+            <h3>URL:</h3>
+            <h4>{{ url }}</h4>
+        </div>
+        {% endif %}
+
+        {% if error %}
+            <h3>Input error:</h3>
+        <h4>{{ error }}</h4>
+        {% endif %}
+    </div>
+
+
+
+</body>
+</html>
