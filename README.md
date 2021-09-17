@@ -4,7 +4,7 @@
 - Python 3
 
 ### Install & Run
-- install requirements.txt
+- activate virtual environment "venv-test"
 - run wsgi.py
 
 ### Heroku Deployment
